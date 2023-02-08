@@ -1,0 +1,82 @@
+// Разметка второго блока состоящего из 2 блоков(в 1 блоке -2 параграфа, во втором 3 небольших картинки)
+.row
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    
+    max-width: $grid-width
+    margin: 0 auto
+    &:not(:last-child)
+        margin-bottom: $margin-vertical-big
+        @include respond(tab-port)
+            margin-bottom: 4rem
+
+    
+.composition
+    position: relative
+
+.col-1-of-2
+    width: 50%
+    @include respond(tab-port)
+        width: 100%
+        margin-bottom: 7rem
+
+.col-1-of-2 img
+    width: 50%
+    box-shadow: $box-shadow
+    border-radius: .5rem
+    position: absolute
+    z-index: 10
+    transition: all .2s
+    outline-offset: 1rem
+    &:hover
+        outline: 1rem solid $color-brown
+        transform: scale(1.1)
+        z-index: 20
+             
+
+.composition__photo_n1
+   
+    top: 0rem
+    left: 0rem
+.composition__photo_n2
+   
+    top: 2rem
+    right: 0rem
+.composition__photo_n3
+    
+    top: 13rem
+    left: 10rem
+    @include respond(tab-port)
+        top: 17rem
+        left: 16rem
+ 
+// разметка 3 блока состоящего из 4 карточек
+.col-1-of-4   
+    width: 20%
+    margin: 0 auto
+    @include respond(tab-land)
+        width: 20%
+    @include respond(tab-port)
+        width: 20%
+        margin-bottom: 4rem
+
+// разметка 4 блока состоящего из 3 карточек
+    
+.col-1-of-3
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3)
+    margin: 0 auto
+    @include respond(tab-port)
+        width: 52%
+        margin-bottom: 2rem
+
+
+
+    
+
+
+
+
+    
+
+

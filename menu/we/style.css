@@ -1,0 +1,55 @@
+.close {
+    float: right;
+}
+/* header */
+.wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.wrapper__text__h1 {
+    width: 100%;
+    font-size: 2rem;
+    color: #A14F03;
+    text-align: center;
+    
+}
+.wrapper__text {
+    width: 50%;
+    font-size: 1.5rem;
+    color: #777777
+}
+
+.wrapper__img {
+    width: 50%;
+    
+}
+.wrapper__img img {
+    border-radius: 50px;
+}
+/* aside */
+
+.conteiner {
+    display: flex;
+    width: 100%;
+    
+}
+.instructor {
+    width: 25%;
+}
+
+.instructor img {
+    border-radius: 50px;
+}
+.instructor p {
+    font-size: 1rem;
+    padding: 0rem 0.5rem;
+    color: #777777
+}
+.instructor h3 {
+    color: #000000;
+    font-size: 1.6rem;
+    text-align: center;
+}

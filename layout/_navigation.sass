@@ -1,0 +1,120 @@
+.navigation
+    &__toggle
+        display: none
+
+    &__button
+        background: $color-white
+        height: 8rem
+        width: 8rem
+        border-radius: 50%
+        position: fixed
+        top: 7rem
+        right: 7rem
+        z-index: 200
+        cursor: pointer
+        box-shadow: $box-shadow
+        @include respond(phone)
+            top: 9rem
+            right: 9rem
+        
+    &__background
+        width: 6rem
+        height: 6rem
+        border-radius: 50%
+        background: radial-gradient($color-brown, $color-light)
+        position: fixed
+        right: 8rem
+        top: 8rem
+        z-index: 100
+        transition: all .7s
+        // transform: scale(80)
+    &__nav
+        height:100vh
+        
+        position: fixed
+        top: 0
+        right: 0
+        z-index: 150
+        opacity: 0
+        width: 0
+        transition: all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6)
+    &__list
+        position: absolute
+        top: 20%
+        left: 40%
+        transition: translate(-50%, -50%)
+        list-style: none 
+        width: 100%
+    &__item
+        &:not(:last-child)            
+            margin-bottom: 3rem
+    &__link
+        &:link, &:visited
+            
+            font-size: 3rem
+            color: $color-white
+            letter-spacing: .5rem
+            text-decoration: none
+            text-transform: uppercase
+            background: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%)
+            background-size: 220%
+            padding: 1rem 2rem
+            transition: all .4s
+            display: inline-block
+            &:hover, &:active
+                background-position: 100%
+                color: $color-brown
+                transform: translateX(1rem)
+
+    &__toggle:checked ~ &__background
+        transform: scale(80)
+    &__toggle:checked ~ &__nav
+        width: 100%
+        opacity: 1
+    &__icon
+        position: relative
+        margin-top: 3.7rem
+        &,
+        &::before,
+        &::after
+            width: 3.5rem
+            height: .2rem
+            background: $color-black
+            display: inline-block
+            // отсупы для span
+            bottom: -0.3rem
+            left: 2.3rem
+            @mixin respond(tab-land)
+                bottom: 0.5rem
+                left: 2.1rem
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            left: 0
+            transition: all .2s
+        &::before
+            top: .8rem
+        &::after
+            top: -0.8rem
+            // расстояние между палочками span
+
+    &__button:hover &__icon::before
+        top: -1rem
+    &__button:hover &__icon::after
+        top: 1rem
+        // span разъезджается при наведении
+    &__button:hover &__icon::before
+        top: -10px
+    &__button:hover &__icon::after
+        top: 10px
+
+    &__toggle:checked + &__button &__icon
+        background: transparent
+    &__toggle:checked + &__button &__icon::before
+        top: 0
+        transform: rotate(135deg)
+    &__toggle:checked + &__button &__icon::after
+        top: 0
+        transform: rotate(-135deg)
+        // span становится крестиком

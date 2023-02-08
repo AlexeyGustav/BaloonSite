@@ -1,0 +1,37 @@
+.section-adventure
+    @include respond(tab-land)
+        width: 100%
+        height: 100%
+    @include respond(tab-port)
+        margin-bottom: -6rem
+    
+.adventure-card
+    display: block
+    padding: 2.5rem
+    background-color: rgba($color-white, .8)
+    border-radius: .5rem
+    box-shadow: $box-shadow
+    text-align: center
+    transition: .2s all
+    @include respond(tab-land)
+        margin-top: 1rem
+    &:hover
+        transform: translateY(-1.5rem) scale(1.03)
+    &__icon
+        font-size: 6rem
+        // размер иконки
+        background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%)
+        -webkit-background-clip: text
+        color: transparent
+        display: inline-block
+        // чтобы отступы работали обязательно надо указать ,что это inline-block
+    @include respond(tab-land)
+        width: 22rem  
+        height: 39rem 
+    @include respond(tab-port)
+        width: 100% 
+        height: 100%
+                
+
+    
+    

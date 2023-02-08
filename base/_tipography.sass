@@ -1,0 +1,103 @@
+body
+    font-family: 'Montserrat', sans-serif
+    font-weight: 400
+    color: $color-gray
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem
+// Заголовок h1
+.title-first
+    color: $color-white
+    font-family: 'Bitter', serif
+    &__main
+        display: block
+        font-weight: 800
+        font-size: 5rem
+        line-height: 6rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        margin-bottom: 1rem
+        animation-name: leftToRight
+                // имя анимации
+        animation-duration: 2s
+                // время анимации
+        animation-delay: 1s
+                // задержка анимации
+        animation-timing-function: ease
+        backface-visibility: hidden
+                // Свойство backface-visibility определяет, видно ли заднюю грань элемента, когда он повёрнут к пользователю.
+        @include respond(tab-land)
+                font-size: 3.6rem
+                letter-spacing: .5rem
+
+    &__secondary
+        
+        display: block
+        font-weight: 200
+        font-size: 4rem
+        line-height: 4.8rem
+        letter-spacing: .5rem
+        animation-name: RightToleft
+        animation-duration: 2s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        margin-bottom: 6.5rem
+        @include respond(tab-land)
+                font-size: 3rem
+                margin-bottom: 3.5rem
+        @include respond(tab-port)
+                margin-bottom: 4rem
+
+
+// второй блок("невероятное ощущение свободы")
+.title-secondary
+        font-family: 'Bitter', serif
+        display: inline-block
+        font-size: $font-size-paragraph-h2
+        line-height: 4.3rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        font-weight: 800
+        background: linear-gradient(90deg, rgba($color-brown, 0.7) 0.03%, rgba($color-light, 0.7) 99.94%)
+        -webkit-background-clip: text
+        color: transparent
+        transition: all .4s
+        // добавляет плавность элементу
+        backface-visibility: hidden
+        // это свойство также убирает дёргания или делает их намного плавнее
+        &:hover
+                transform: skewY(5deg) skewX(15deg) scale(1.1)
+                box-shadow: $box-shadow-h2
+        &_white
+                color: $color-white
+        @include respond(tab-land)
+                font-size: 4rem
+
+.title-third
+        font-family: 'Bitter', serif
+        font-size: $font-size-paragraph-h3
+        letter-spacing: .2rem
+        text-transform: uppercase
+        font-weight: 700
+        @include respond(tab-land)
+                font-size: 1.8rem
+
+.paragraph
+        font-size: $font-size-paragraph
+        letter-spacing: .2rem
+        line-height: 140%
+        font-weight: 400
+        @include respond(tab-land)
+                font-size: 1.5rem
+                padding-bottom: none
+                
+.text-align-center h2
+        font-family: 'Bitter', serif
+.card-tour__span
+        font-family: 'Bitter', serif
+.col-1-of-2
+        color: $color-gray
+.col-1-of-4
+        color: $color-gray
+.feedback-card_box
+        color: $color-gray

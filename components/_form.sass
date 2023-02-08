@@ -1,0 +1,123 @@
+.book
+    height: 50rem
+    background-image: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 57%, rgba(186,133,80,0.8) 57%, rgba(161,79,3,0.8) 100%), url(./img/bf-form.jpg)
+    box-shadow: $box-shadow
+    @include respond(tab-port)
+        background-image: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 507%, rgba(186,133,80,0.8) 57%, rgba(161,79,3,0.8) 100%), url(./img/bf-form.jpg)
+        height: 56rem
+.form
+    width: 65%
+    padding-top: 5rem
+    padding-left: 5rem
+    &__group:nth-child(2)
+        margin-bottom: 3rem
+        @include respond(tab-land)
+            margin-bottom: 1.5rem
+    &__input-radio
+        display: none
+    &__input
+        font-size: $font-size-paragraph
+        letter-spacing: .2rem
+        color: $color-black
+        padding: 2rem 0rem 2rem 2rem
+        border-color: $color-white
+        padding: none
+        border-bottom: .4rem solid transparent
+        border-radius: .5rem
+        width: 75%
+        box-shadow: $box-shadow   
+
+        &:focus
+            outline: none
+            border-bottom: .4rem solid #66D763
+        &:focus:invalid
+            border-bottom: .4rem solid #D76363
+    &__lable
+        font-size: $font-size-paragraph
+        letter-spacing: .2rem
+        font-weight: 400
+        display: block
+        margin-top: 1rem
+        margin-left: 1.5rem
+        transition: .7s all
+    &__input:placeholder-shown + &__lable
+        opacity: 0 
+        visibility: none
+        transform: translateY(-2rem)
+    &__group
+        
+        margin-left: 1rem
+        font-size: $font-size-paragraph
+        font-weight: 400
+        &_conteiner
+            display: flex
+            flex-direction: row
+            margin-top: 2rem
+            @include respond(tab-land)
+                display: block
+                margin-top: 1rem
+            @include respond(tab-port)
+                display: flex
+                margin-top: 3rem
+                margin-bottom: 2rem
+
+
+    &__lable-radio
+        cursor: pointer
+        position: relative
+        margin: 0rem 2rem
+        padding-left: 1rem
+        
+    &__button-radio
+        height: 3rem
+        width: 3rem
+        border-radius: 50%
+        border: .5rem solid $color-light
+        display: block
+        position: absolute
+        left: -3rem
+        top: -0.6rem
+        @include respond(tab-land)
+            height: 2rem
+            width: 2rem
+            top: -0.1rem
+            border: .4rem solid $color-light
+        
+        &::after
+            content: ""
+            display: block
+            height: 1.5rem
+            width: 1.5rem
+            border-radius: 50%
+            background: $color-light
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) 
+            opacity: 0
+            transition: .2s all
+            @include respond(tab-land)
+                height: .9rem
+                width: .9rem
+
+    &__input-radio:checked ~ &__lable-radio &__button-radio::after
+        opacity: 1
+        
+    
+        
+.form__group_2
+    margin-top: 3rem
+.title-secondary_form
+    display: inline-block
+    font-size: $font-size-paragraph-h2
+    line-height: 4.3rem
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color-brown, 0.7) 0.03%, rgba($color-light, 0.7) 99.94%)
+    -webkit-background-clip: text
+    color: transparent
+    @include respond(tab-port)
+        font-size: 3.1rem
+        letter-spacing: .7rem
+

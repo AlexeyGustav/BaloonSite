@@ -1,0 +1,23 @@
+// отступы от секций
+.section-about
+    padding-top: 8rem
+    height: 100%
+    @include respond(tab-land)
+        padding-top: 4rem
+    @include respond(tab-port)
+        padding-bottom: 20rem
+    
+   
+
+.section-adventure
+    padding: 21rem 0 
+    background-image: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(./img/section3.jpg)
+    clip-path: polygon(0 9%, 100% 15%, 100% 90%, 0 85%)
+
+.feed-back
+    padding: 8rem 0rem
+    position: relative
+
+.section-book
+    padding: 10rem  
+    background-image: linear-gradient(90deg, $color-brown, $color-light)
