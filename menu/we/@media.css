@@ -1,6 +1,6 @@
 @media (max-width: 480px) {
     body {
-        background: url(/img/we-fon-smalll.jpg);
+        background: url(we-fon-smalll.jpg);
         background-size: cover;
         background-attachment: fixed;
     }
@@ -9,9 +9,6 @@
         font-size: 1.5rem;
         margin-left: 0;
     }
-    /* .wrapper {
-        flex-direction: column;
-    } */
     .wrapper__text {
         width: 100%;
         font-size: 1rem;
